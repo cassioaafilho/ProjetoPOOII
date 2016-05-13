@@ -3,16 +3,78 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"      
-      xmlns:h="http://java.sun.com/jsf/html">
-	
+      xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>JSF 2.0 Hello World</title>
     </h:head>
     <h:body>
-    	<h2>JSF 2.0 Hello World Example - hello.xhtml</h2>
-    	<h:form>
-    	   <h:inputText value="#{helloBean.name}"></h:inputText>
-    	   <h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
-    	</h:form>
+    
+    <p:outputLabel for="basic" value="Basic:" />
+    <p:inputText id="basic" />
+ 
+    <p:outputLabel for="password" value="Password:" />
+    <p:password id="password" />
+ 
+    <p:outputLabel for="search" value="Search:" />
+    <p:inputText id="search" placeholder="Search text" type="search"/>
+ 
+    <p:outputLabel for="phone" value="Phone:" />
+    <p:inputText id="phone" placeholder="Phone Number" type="tel" />
+
+    <p:outputLabel for="textarea" value="Textarea" />
+    <p:inputTextarea id="textarea" />
+
+    <p:outputLabel for="selectOneMenu" value="SelectOneMenu" />
+    <p:selectOneMenu id="selectOneMenu">
+        <f:selectItem itemLabel="Select One" itemValue="" />
+        <f:selectItem itemLabel="Option 1" itemValue="1" />
+        <f:selectItem itemLabel="Option 2" itemValue="2" />
+        <f:selectItem itemLabel="Option 3" itemValue="3" />
+    </p:selectOneMenu>
+
+
+    <p:outputLabel for="switch" value="Switch" />
+    <p:inputSwitch id="switch" />
+
+    <p:outputLabel for="selectOneRadio" value="SelectOneRadio" />
+    <p:selectOneRadio id="selectOneRadio">
+        <f:selectItem itemLabel="Option 1" itemValue="1" />
+        <f:selectItem itemLabel="Option 2" itemValue="2" />
+        <f:selectItem itemLabel="Option 3" itemValue="3" />
+    </p:selectOneRadio>
+
+    <p:outputLabel for="selectOneButton" value="SelectOneButton" />
+    <p:selectOneButton id="selectOneButton">
+        <f:selectItem itemLabel="Option 1" itemValue="1" />
+        <f:selectItem itemLabel="Option 2" itemValue="2" />
+        <f:selectItem itemLabel="Option 3" itemValue="3" />
+    </p:selectOneButton>
+
+    <p:outputLabel for="selectBooleanCheckbox" value="SelectBooleanCheckbox" />
+    <p:selectBooleanCheckbox id="selectBooleanCheckbox" itemLabel="I agree"/>
+
+    <p:outputLabel for="selectManyCheckbox" value="SelectManyCheckbox" />
+    <p:selectManyCheckbox id="selectManyCheckbox">
+        <f:selectItem itemLabel="Option 1" itemValue="1" />
+        <f:selectItem itemLabel="Option 2" itemValue="2" />
+        <f:selectItem itemLabel="Option 3" itemValue="3" />
+    </p:selectManyCheckbox>
+
+    <p:outputLabel for="selectManyButton" value="SelectManyButton" />
+    <p:selectManyButton id="selectManyButton">
+        <f:selectItem itemLabel="Option 1" itemValue="1" />
+        <f:selectItem itemLabel="Option 2" itemValue="2" />
+        <f:selectItem itemLabel="Option 3" itemValue="3" />
+    </p:selectManyButton>
+
+    <p:outputLabel for="selectCheckboxMenu" value="SelectCheckboxMenu" />
+    <p:selectCheckboxMenu id="selectCheckboxMenu">
+        <f:selectItem itemLabel="Select Multiple" itemValue="" />
+        <f:selectItem itemLabel="Option 1" itemValue="1" />
+        <f:selectItem itemLabel="Option 2" itemValue="2" />
+        <f:selectItem itemLabel="Option 3" itemValue="3" />
+    </p:selectCheckboxMenu>
+                     
     </h:body>
 </html>
